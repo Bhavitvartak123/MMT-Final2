@@ -1,0 +1,67 @@
+.LoginContainer{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    height: 490px;
+}
+.mainLogin{
+    border: 1px solid grey;
+    box-shadow:5px  3px 3px #807e7e; 
+    border-radius: 10px;
+    width: 350px;
+}
+.mainLogin span{
+    cursor: pointer;
+    font-size: 18px;
+}
+.icons{
+    
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+}
+.icons button{
+    border-radius: 5px;
+    height: 55px;
+    font-size: 20px;
+   
+}
+.Email{
+    margin:20px
+}
+#iconFace{
+    width:50px;
+}
+.OR{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+.OORR{
+    padding: 3px;
+    font-size: 20px;
+}
+.spaceDiv{
+    width: 120px;
+    border-bottom:1px solid black;
+}
+.center{
+    text-align: center;
+}
+.center input{
+    width: 250px;
+    height: 30px;
+    border-radius: 2px;
+}
+.center button{
+    cursor: pointer;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 20px;
+    background: rgb(69,69,185);
+    color: white;
+}
+.icons img{
+    width:38px;
+    border-radius: 50%;
+}

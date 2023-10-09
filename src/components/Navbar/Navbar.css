@@ -1,0 +1,168 @@
+.NavbarContainer {
+    position: sticky;
+    background-color: white;
+    top: 0px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1000;
+}
+
+.logo {
+    padding: 8px;
+
+}
+
+.logo img {
+    top: 10px;
+    width: 125px;
+}
+
+.navlinks {
+    padding: 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: orangered;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navlinks:hover {
+    color: red;
+}
+
+.navlinks img {
+    width: 23px;
+    color: green;
+}
+
+#dd {
+    fill: rgb(243, 16, 16);
+}
+
+.DashboardPortal {
+    padding: 17px;
+}
+
+.logoutClick {
+    position: fixed;
+    font-size: 5px;
+}
+
+.icon_out{
+    color: white;
+    padding: 11px;
+}
+.done {
+    font-size: 15px;
+}
+
+.btn-btn{
+    /* background-color: red; */
+    height: 30px;
+    border-radius: 15px;
+    /* padding: 5px; */
+}
+
+@media only screen and (max-width: 500px) {
+    .navvvvv {
+        display: none;
+    }
+
+    .NavbarContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        width: 5rem;
+        padding-top: 18px;
+    }
+
+    .navlinks {
+        width: 40px;
+        text-align: center;
+    }
+
+    .btn-btn {
+        height: 30px;
+        border-radius: 15px;
+        padding: 5px;
+    }
+
+    .DashboardPortal {
+        padding-top: 21px;
+        padding-right: 12px;
+    }
+}
+
+@media only screen and (max-width: 419px) {
+    .burger-bar {
+        width: 33px;
+        height: 4px;
+        background-color: rgb(0, 183, 255);
+        border-radius: 0.5em;
+        margin-top: 6px;
+    }
+
+    .burger-menu {
+        padding-top: 15px;
+        padding-left: 5px;
+    }
+
+    .menu {
+        width: 50%;
+        height: 100vh;
+        background-color: rgb(154, 181, 240);
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        margin-top: 63px;
+    }
+
+    #nav-sub {
+        padding-top: 10%;
+    }
+
+    #nav-sub ul {
+        list-style-type: none;
+    }
+
+    .list_items li a {
+        text-decoration: none;
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    /* ------------- sliding menu ------------------ */
+    .hidden {
+        display: none;
+    }
+
+    .visible {
+        display: inherit;
+    }
+
+    /* unclicked */
+    .burger-bar.unclicked {
+        transform: rotate(0) translate(0);
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+    }
+}
+
+.mainhum {
+    margin-left: 20px;
+}
+
+@media only screen and (min-width: 419px) {
+    .list_items {
+        display: none;
+    }
+
+    .burger-bar {
+        display: none;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+}

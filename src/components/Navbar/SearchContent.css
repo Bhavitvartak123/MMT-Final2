@@ -1,0 +1,100 @@
+.SearchContentContainer {
+    background-color: rgb(19, 65, 117);
+    padding: 70px;
+    position: relative;
+}
+
+.BIDF {
+    position: absolute;
+    font-size: 30px;
+    top: 80px;
+    left: 33%;
+    color: black;
+}
+
+.BIDFc {
+    background-color: brown;
+    left: 200px;
+}
+
+.SearchContentSmall_container {
+    border-radius: 30px;
+    padding: 80px;
+    background-color: white;
+    box-shadow: 5px 10px 3px rgb(34, 34, 34);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.fromto {
+    background-color: red;
+    margin-top: 90px;
+}
+
+.labels {
+    margin-left: 7px;
+    font-size: 17px;
+    color: rgb(14, 13, 13);
+}
+
+.All {
+    border: 1px solid black;
+    width: 160px;
+    height: 35px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 9px;
+    margin-top: 7px;
+    color: rgb(131, 128, 128);
+    cursor: pointer;
+}
+
+.All:hover {
+    transition: all .8s;
+}
+
+.btnSearch {
+    position: absolute;
+    top: 272px;
+    left: 43%;
+}
+
+.btnSearch button {
+    width: 170px;
+    letter-spacing: 8px;
+    font-size: 18px;
+    background-color: rgb(13, 110, 253);
+    color: white;
+    border-radius: 10px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.btnSearch button:hover {
+    background-color: rgb(19, 65, 117);
+}
+
+.highlight select:active {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 847px) {
+    .BIDF {
+        text-overflow: inherit;
+        left: 24%;
+        width: 55%;
+        font-size: 23px;
+    }
+
+    .btnSearch {
+        position: absolute;
+        top: 420px;
+        left: 28%;
+    }
+
+    .SearchContentContainer {
+        padding: 50px;
+    }
+}

@@ -1,0 +1,89 @@
+.ApiContentOuter {
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.ApiContentInner {
+    position: relative;
+    width: 40%;
+    display: flex;
+    border: 3px solid rgb(206, 30, 30);
+    justify-content: space-around;
+    margin: 10px;
+    padding-top: 15px;
+    border-radius: 15px;
+}
+
+.ApiContentInner:hover {
+    box-shadow: 10px 5px 5px #807e7e;
+    transition: all .5s;
+
+    border-radius: 40px;
+}
+
+.font {
+    font-size: 22px;
+    font-weight: 40;
+}
+
+span {
+    font-size: 15px;
+    color: gray;
+}
+
+span.font {
+    font-size: 10px;
+}
+
+.BookBtn {
+    position: absolute;
+    top: 222px;
+    left: 215px;
+
+}
+
+.BookBtn button {
+    padding: 8px;
+    font-size: 20px;
+    width: 130px;
+    background: rgb(25, 135, 84);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+
+    word-spacing: 1px;
+}
+
+#rupees {
+    font-size: 22px;
+    color: green;
+}
+
+@media (min-width: 300px) and (max-width: 858px) {
+    .ApiContentInner {
+        position: relative;
+        width: 70%;
+        display: flex;
+        border: 3px solid rgb(206, 30, 30);
+        justify-content: space-around;
+        margin: 10px;
+        padding-top: 15px;
+        border-radius: 15px;
+        font-size: 10px;
+        padding: 15px;
+    }
+
+    .BookBtn {
+        position: absolute;
+        top: 228px;
+        left: 100px;
+
+    }
+
+
+}
