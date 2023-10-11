@@ -36,6 +36,7 @@ const ApiFetch = () => {
 
         getApi();
     }, []);
+    
     useEffect(() => {
         console.log("data", data)
     }, [data]);
@@ -63,9 +64,8 @@ const ApiFetch = () => {
 
                                 </div>
                                 <div className="Departure">
-                                    <span>DEPARTURE:</span>  <p>{item.departure.departureTime}</p>
+                                    <span>DEPARTURE:</span>  <p>{item.departure?.departureTime}</p>
                                     <img src={TakeOFF} style={{ width: "50px" }} alt="TakeOFF" />
-
                                 </div>
                                 <div className="price">
                                     <span>Price:</span><p id="rupees"><b> &#8377; {item.price}</b></p>
