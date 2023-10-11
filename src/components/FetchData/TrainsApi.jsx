@@ -44,7 +44,7 @@ const TrainsApi = () => {
                 colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
             /></div> :
             <>{filters.length>0?
-                filters.map((item, index) => (
+               (filters && filters.map((item, index) => (
                     <div key={index} className="ApiContentOuter">
                         <div className='ApiContentInner'>
                             <div className="From">
@@ -53,7 +53,7 @@ const TrainsApi = () => {
 
                             </div>
                             <div className="Departure">
-                                <span>DEPARTURE:</span> <b><p>{item.departure.departureTime} | {item.departure.departureTime}</p></b>
+                                <span>DEPARTURE:</span> <b><p>{item.departure?.departureTime} | {item.departure?.departureTime}</p></b>
                                 <span>TRAIN NUMBER:</span><b><p>{item.train_number}</p></b>
                                 <img src={trn} style={{ width: "40px" }} alt="TakeOFF" />
                             </div>
@@ -70,7 +70,7 @@ const TrainsApi = () => {
                             </div>
                         </div>
                     </div>
-                )):
+                ))):
                 <Empty/>
             }
                                 </>
