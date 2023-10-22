@@ -10,13 +10,13 @@ import { DataParentContext } from '../App';
 import { Link } from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
 import { Navigate, useNavigate } from "react-router-dom";
-
 const Navbar = () => {
     const tempnavi = useNavigate();
-    const [closePage, setClosePage] = useState(true);
+    const [closePage, setClosePage] = useState(false);
     const closefun = () => {
-        setClosePage(false)
+        setClosePage(true)
         tempnavi('/')
+        alert("sucessful")
     }
     const [burger_class, setBurgerClass] = useState("burger-bar unclicked")
     const [menu_class, setMenuClass] = useState("menu hidden")
@@ -36,8 +36,7 @@ const Navbar = () => {
     const [modalBtn, setModalBtn] = useState(false)
     const localContext = useContext(DataParentContext);
     const onOff = () => {
-        setModalBtn(true)
-        //console.log("alpha")
+        setModalBtn(!modalBtn)
     }
     useEffect(() => {
         console.log(modalBtn)
