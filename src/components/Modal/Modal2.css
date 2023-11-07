@@ -10,12 +10,12 @@
     border-radius: 3%;
     border: 3px solid white;
     position: fixed;
-    top:50%;
+    top:47%;
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: rgb(247 247 247);
     width: 400px;
-    height: 420px;
+    height: 423px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -23,18 +23,19 @@
 }
 
 .Fare{
-    padding: 20px;
-    margin: 47px;
-    height: 135px;
+    padding: 14px;
+    margin: 42px;
+    height: 217px;
     border: 2px solid black;
  }
 
  .baseFare{
+    padding: 0px;
     display: flex;
     justify-content: space-around;
-    font-size: 20px;
+    font-size: 19px;
     border-bottom: 2px solid black;
-    margin: 10px;
+    margin: 8px;
 }
 
 #numbers{
@@ -51,6 +52,7 @@
     align-items: flex-end;
     width: 30%;
    opacity: 90%;
+   margin: -40px;
 }
 
 .btn-close{
@@ -64,9 +66,11 @@
     margin-top: -22%;
     cursor: pointer;
 }
+.sub_head{
+    font-weight: bold;
+}
 
 @media only screen and (max-width: 500px) {
-
     .MMTmodal-sub{
         width: 280px;
         height: 325px;  
@@ -91,7 +95,7 @@
     .baseFare{
         display: flex;
         justify-content: space-around;
-        font-size: 19px;
+        font-size: 13px;
         border-bottom: 2px solid black;
         margin: 10px;
     }
@@ -99,8 +103,7 @@
         align-items: flex-end;
         width: 30%;
        opacity: 90%;
-
-
+       padding-top: 45px;
     }
 }
 
