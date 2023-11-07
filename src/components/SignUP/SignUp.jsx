@@ -12,6 +12,7 @@ const Login = () => {
     const details = (e) => {
         e.preventDefault();
         let emailPattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+       
         if (email === "" && password === "" && userName === "") {
             alert("All  input field are  mandatory ...")
         } else if (!email.match(emailPattern)) {
