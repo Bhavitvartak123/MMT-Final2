@@ -3,7 +3,6 @@ import Book from '../../Logo/BookHotels.png';
 import { ColorRing } from 'react-loader-spinner';
 import Modal from '../Modal/Modal';
 import SearchContent from '../Navbar/SearchContent';
-
 import './ApiFetch.css';
 import { DataParentContext } from '../App';
 import Empty from './Empty';
@@ -12,19 +11,20 @@ const Second=()=>{
     console.log("danish")
     return( <h1>danish</h1> ) 
 }
-
 const Hotels = () => {
     const context = useContext(DataParentContext)
-    const {filters, setfilter,destination, setDestination, source, setSource}=context
+    const {filters, setfilter,destination, setDestination, source, setSource, item, setItem}=context
     const [data, setData] = useState([]);
     const [loader, setLoader] = useState(false);
 console.log('filters in hotel --',filters)
     
-    const popUp = (index) => {
+    const popUp = (index,item) => {
+        setItem(item)
+        console.log("item", item)
         let list = [...data]
         list[index].isAnkur = !list[index].isAnkur
         setData(list)
-        
+        setItem(item)
         //setModelData(item)
         // console.log("pops",item)
     }
@@ -76,7 +76,7 @@ console.log('filters in hotel --',filters)
                                     <span>Guest</span>  <p>{item.guests}</p>
                                 </div>
                                 <div className="BookBtn">   
-                                    <button onClick={()=>popUp(index)}>BOOK NOW</button>
+                                    <button onClick={()=>popUp(index,item)}>BOOK NOW</button>
                                     {
                                      item.isAnkur && <Modal setData={setData} index={index} data={data} modelData={item}  fakeString="hotel"/>
                                     }   
