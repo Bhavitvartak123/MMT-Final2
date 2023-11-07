@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import ReactDom from 'react-dom';
 import './Modal1.css'
 
-const Modal = ({ setData, data, modelData, index, fakeString }) => {
+const Modal = ({ setData, data, modelData, index, fakeString, item }) => {
     const navigate = useNavigate();
     const [cardName, setCardName] = useState('')
     const [cardNum, setCardNum] = useState('')
@@ -11,6 +11,8 @@ const Modal = ({ setData, data, modelData, index, fakeString }) => {
     const [cardCvv, setCardCvv] = useState('')
     const [error, setError] = useState(false)
     const handleSubmit = (e) => {
+    console.log("itemmodal", item)
+
         e.preventDefault()
         if (cardNum.length <= 18) {
             // setError(true)
@@ -29,7 +31,7 @@ const Modal = ({ setData, data, modelData, index, fakeString }) => {
             return;
         }
         navigate('/modal2')
-        console.log(cardName, cardNum, cardExp, cardCvv)
+        // console.log(cardName, cardNum, cardExp, cardCvv)
     }
     const handleDate = (e) => {
         console.log(e)
