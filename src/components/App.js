@@ -13,12 +13,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Modal from './Modal/Modal';
 import Modal2 from './Modal/Modal2';
 export const DataParentContext = React.createContext();
-  
-
 // check fault
 const App = () => {
   const [filters, setfilter] = useState([]);
-
+  const [item, setItem] = useState();
   const [destination, setDestination] = useState()
   const [source, setSource] = useState()
   const [LoginDetails, setLoginDetails] = useState([])
@@ -26,7 +24,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <DataParentContext.Provider value={{filters, setfilter, LoginDetails, setLoginDetails, destination, setDestination, source, setSource}} >
+        <DataParentContext.Provider value={{filters, setfilter, LoginDetails, setLoginDetails, destination, setDestination, source, setSource, item, setItem}} >
           <Navbar />
           <Routes>
             <Route path='/login' element={<Login setLoginDetails={setLoginDetails} />} />
