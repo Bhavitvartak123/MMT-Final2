@@ -9,15 +9,18 @@ import Empty from './Empty';
 
 const TrainsApi = () => {
     const context = useContext(DataParentContext)
-    const {filters, setfilter,destination, setDestination, source, setSource}=context
+    const {filters, setfilter,destination, setDestination, source, item, setItem, setSource}=context
     console.log('filters in trainapi--',filters)
     const [data, setData] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
     const [loader, setLoader] = useState(false);
-    const popUp = (index) => {
+    const popUp = (index,item) => {
+        setItem(item)
+        console.log("item", item)
         let list = [...data]
         list[index].isAnkur = !list[index].isAnkur
         setData(list)
+        setItem(item)
     }
     const getApi2 = async () => {
         setLoader(true)
@@ -50,7 +53,6 @@ const TrainsApi = () => {
                             <div className="From">
                                 <span>FROM:</span>  <p className="font">{item.from}</p>
                                 <span> TO:</span>  <p className="font">{item.to}</p>
-
                             </div>
                             <div className="Departure">
                                 <span>DEPARTURE:</span> <b><p>{item.departure?.departureTime} | {item.departure?.departureTime}</p></b>
@@ -63,7 +65,7 @@ const TrainsApi = () => {
                                 <span>Duration:</span> <b><p>{item.duration}</p></b>
                             </div>
                             <div className="BookBtn">
-                                <button onClick={() => popUp(index)}>BOOK NOW</button>
+                                <button onClick={() => popUp(index,item)}>BOOK NOW</button>
                                 {
                                     item.isAnkur && <Modal setData={setData} index={index} data={data} modelData={item} fakeString="train"/>
                                 }
