@@ -6,7 +6,7 @@ import SearchContent from '../Navbar/SearchContent';
 import { ColorRing } from 'react-loader-spinner';
 import { DataParentContext } from '../App';
 import Empty from './Empty';
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const ApiFetch = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,21 +15,21 @@ const ApiFetch = () => {
     const context = useContext(DataParentContext)
     const { filters, setfilter, destination, setDestination, source, setSource, setItem } = context
     console.log("destination", destination, "source", source)
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     console.log('filters in flightapi--', filters)
     const popUp = (index,item) => {
         setItem(item)
         console.log("item", item)
-    let loginCheck = localStorage.getItem("logIn")
-        if (!loginCheck) {
-            alert("Please Login ");
-            navigate("/login")
-        }else{
+        // let loginCheck = localStorage.getItem("logIn")
+        // if (!loginCheck) {
+        //     alert("Please Login ");
+        //     navigate("/login")
+        // }else{
         let list = [...data]
         console.log("list", list)
         list[index].isAnkur = !list[index].isAnkur
         setData(list)
-        }
+        // }
     }
     const getApi = async () => {
         setLoader(true)
