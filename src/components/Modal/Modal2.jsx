@@ -12,6 +12,7 @@ import { DataParentContext } from '../App';
 const Modal2 = ({ setData, data, modelData, index, fakeString }) => {
     const context = useContext(DataParentContext)
     const { item } = context
+    
     const tempnavi = useNavigate();
     console.log("modalitem", item)
     const [success, setSuccess] = useState(false);
@@ -32,11 +33,14 @@ const Modal2 = ({ setData, data, modelData, index, fakeString }) => {
                         <div><h1 style={{ textAlign: "center", marginTop: "-16px"}}>Fare Summary </h1></div>
                         <button className='btn-close' onClick={closefun}>&times;</button>
                         <div className='Fare'>
-
-                            <div className='baseFare'>
+                          <div className='baseFare'> 
                                 <div style={{ marginLeft: "5px" }}><b>Destination/City:-</b></div>
-                                <div style={{ marginRight: "20px" }}>{item.from}/{item.to}{item.city}</div>
+                                {item.from && <div style={{ marginRight: "20px" }}>{item.from}{item.to}{item.city}</div>}
                             </div>
+                            {/* <div className='baseFare'>
+                                <div style={{ marginLeft: "5px" }}><b>Destination/City:-</b></div>
+                                <div style={{ marginRight: "20px" }}>{item.from}{item.to}{item.city}</div>
+                            </div> */}
                             <div className='baseFare'>
                                 <div style={{ marginLeft: "5px" }}><b>AirLine/Hotel/TrainNo:-</b></div>
                                 <div style={{ marginRight: "20px" }}>{item.airlineName}{item.hotel_name}{item.train_number}</div>
@@ -52,7 +56,7 @@ const Modal2 = ({ setData, data, modelData, index, fakeString }) => {
                             <div className='baseFare'>
                                 <div style={{ marginLeft: "5px" }}><b>Total Amount:-</b></div>
                                 <div style={{ marginRight: "20px" }}>&#8377;
-                                    {Number(item.price) + shipping_fee}  {Number(item.price_per_night) + shipping_fee}</div>
+                                    {Number(item.price) + shipping_fee || Number(item.price_per_night) + shipping_fee}  </div>
                             </div>
                             <h4 style={{ textAlign: "center", color: "red" }} className='sub_head'> {`Thank you choosing ${localUserName}`}</h4>
                         </div>
