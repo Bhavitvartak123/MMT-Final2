@@ -11,7 +11,7 @@ import { DataParentContext } from '../App';
 
 const Modal2 = ({ setData, data, modelData, index, fakeString }) => {
     const context = useContext(DataParentContext)
-    const { item } = context
+    const { item = {} } = context
     
     const tempnavi = useNavigate();
     console.log("modalitem", item)
@@ -35,7 +35,7 @@ const Modal2 = ({ setData, data, modelData, index, fakeString }) => {
                         <div className='Fare'>
                           <div className='baseFare'> 
                                 <div style={{ marginLeft: "5px" }}><b>Destination/City:-</b></div>
-                                {item.from && <div style={{ marginRight: "20px" }}>{item.from}{item.to}{item.city}</div>}
+                                <div style={{ marginRight: "20px" }}>{item.from}{item.to}{item.city}</div>
                             </div>
                             {/* <div className='baseFare'>
                                 <div style={{ marginLeft: "5px" }}><b>Destination/City:-</b></div>
